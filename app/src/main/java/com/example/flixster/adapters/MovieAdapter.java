@@ -100,7 +100,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             //android does not have an inbuilt way to render remote images
             //use glide library  with(who).load(from).into(who)
             //placeholder image shown while requested is in process
-            Glide.with(context).load(imageUrl).placeholder(R.drawable.placeholder).into(ivPoster);
+            Glide.with(context)
+                    .load(imageUrl)
+                    .placeholder(R.drawable.placeholder)
+                    .into(ivPoster);
 
             //check popularity
             if(movie.isPopularity()){

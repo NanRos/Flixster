@@ -25,14 +25,14 @@ import okhttp3.Headers;
 //extend YouTubeBaseActivity. One current drawback is that this library does not inherit from
 // AppCompatActivity so some of your styles may not match those that are defined in styles.xml.
 public class DetailActivity extends YouTubeBaseActivity {
-    //youtube api key
-    private static final String YOUTUBE_API_KEY ="AIzaSyCOpOftizmw9ivQLAoXpE3HsOsWs2GpO7Y";
+
     //url for video list from api
     private static final String VIDEOS_URL="https://api.themoviedb.org/3/movie/%d/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
     //videos from youtube
     private static final String SITE_TYPE = "YouTube";
     // TAG for log
     public static final String TAG = "DetailActivity";
+    private  String YOUTUBE_API_KEY ="" ;
 
     //define variables for views
     TextView tvTitle;
@@ -46,7 +46,8 @@ public class DetailActivity extends YouTubeBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-
+        //youtube api key
+        YOUTUBE_API_KEY =getString(R.string.youTube_api_key);
         //grab view from layout by id
         tvTitle = findViewById(R.id.tvTitle);
         tvOverview = findViewById(R.id.tvOverview);
