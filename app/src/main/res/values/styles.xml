@@ -9,9 +9,15 @@
     </style>
     <style name="SimpleAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="android:windowContentTransitions">true</item>
     </style>
 
     <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <item name="background">@color/black</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/lightGray</item>
+        <item name="colorControlActivated">@color/gold</item>
     </style>
 </resources>

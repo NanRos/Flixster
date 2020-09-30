@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    >
-
+    android:transitionName="profile"
+    android:id="@+id/container">
     <ImageView
         android:id="@+id/ivPoster"
         android:layout_width="350dp"
@@ -15,7 +16,17 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         tools:srcCompat="@tools:sample/avatars" />
-
+    <ImageView
+        android:id="@+id/ivPlayIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivPoster"
+        android:layout_alignBottom="@id/ivPoster"
+        android:layout_alignEnd="@id/ivPoster"
+        android:layout_alignStart="@id/ivPoster"
+        android:padding="60dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/play_icon" />
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
@@ -28,10 +39,9 @@
         android:background="@color/red"
         android:gravity="center"
         android:textColor="@color/white"
-        android:textSize="26sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         tools:text="MULAN" />
-
     <TextView
         android:id="@+id/tvOverview"
         android:layout_width="wrap_content"

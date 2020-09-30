@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
+    android:layout_height="wrap_content"
+    android:transitionName="profile"
+    android:id="@+id/container">
     <ImageView
         android:id="@+id/ivPoster"
         android:layout_width="120dp"
@@ -14,7 +16,17 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         tools:srcCompat="@tools:sample/avatars" />
-
+    <ImageView
+        android:id="@+id/ivPlayIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivPoster"
+        android:layout_alignBottom="@id/ivPoster"
+        android:layout_alignEnd="@id/ivPoster"
+        android:layout_alignStart="@id/ivPoster"
+        android:padding="20dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/play_icon" />
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
@@ -24,13 +36,13 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
-        android:textSize="26sp"
+        android:textSize="30sp"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:gravity="center"
         android:background="@color/red"
+        android:text="@{movie.title}"
         tools:text="MULAN" />
-
     <TextView
         android:id="@+id/tvOverview"
         android:layout_width="wrap_content"
@@ -42,5 +54,6 @@
         android:layout_toEndOf="@+id/ivPoster"
         android:textStyle="bold"
         android:textColor="@color/white"
+        android:text="@{movie.overview}"
         tools:text="When the Emperor of China issues a decree that one man per family must serve in the Imperial Chinese Army to defend the country from Huns, Hua Mulan, the eldest daughter of an honored warrior, steps in to take the place of her ailing father. She is spirited, determined and quick on her feet. Disguised as a man by the name of Hua Jun, she is tested every step of the way and must harness her innermost strength and embrace her true potential." />
 </RelativeLayout>
