@@ -21,10 +21,11 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [x] Add a rounded corners for the images using the Glide transformations. (1 point)
 
 ### App Walkthough GIF
+Here's a walkthrough of implemented user stories:
 
-`TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
+<img src='walkthrough_pt2.1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='walkthrough_pt2.2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<img src="YOUR_GIF_URL_HERE" width=250><br>
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ### Notes
