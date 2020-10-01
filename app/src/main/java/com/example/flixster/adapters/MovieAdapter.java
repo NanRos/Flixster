@@ -29,6 +29,8 @@ import org.parceler.Parcels;
 
 import java.util.List;
 
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
+
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
     Context context; //where adapter being constructed from
@@ -100,8 +102,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             //android does not have an inbuilt way to render remote images
             //use glide library  with(who).load(from).into(who)
             //placeholder image shown while requested is in process
+            int radius = 40; // corner radius, higher value = more rounded
+            int margin = 10; // crop margin, set to 0 for corners with no crop
             Glide.with(context)
                     .load(imageUrl)
+                    .fitCenter()
+                    .transform(new RoundedCornersTransformation(radius, margin))
                     .placeholder(R.drawable.placeholder)
                     .into(ivPoster);
 
